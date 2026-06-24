@@ -19,7 +19,7 @@
    - В разделе **Branch** выберите `main` и `/ (root)`
    - Нажмите **Save**
 4. Через 1–2 минуты сайт будет доступен по адресу:
-   `https://ВАШ_ЛОГИН.github.io/kirill-birthday/`
+   `https://thriathlon92.github.io/kirill-birthday/`
 
 ## Ссылка на Яндекс Карты
 
