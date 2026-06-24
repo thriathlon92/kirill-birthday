@@ -38,41 +38,86 @@
       z-index: 0;
     }
 
-    .stars::before,
-    .stars::after {
+    .stars-big,
+    .stars-small {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .stars-big::before,
+    .stars-big::after,
+    .stars-small::before,
+    .stars-small::after {
       content: '';
       position: absolute;
-      width: 2px;
-      height: 2px;
+      width: 4px;
+      height: 4px;
       border-radius: 50%;
       animation: twinkle 3s ease-in-out infinite alternate;
     }
 
-    .stars::before {
+    .stars-big::before {
       box-shadow:
-        20px 40px 0 #fff, 80px 120px 0 #fff, 150px 60px 0 #fff,
-        220px 180px 0 #fff, 310px 90px 0 #fff, 400px 200px 0 #fff,
-        500px 50px 0 #fff, 580px 170px 0 #fff, 680px 100px 0 #fff,
-        750px 220px 0 #fff, 100px 300px 0 #fff, 300px 350px 0 #fff,
-        500px 380px 0 #fff, 700px 320px 0 #fff, 200px 450px 0 #fff,
-        450px 420px 0 #fff, 620px 480px 0 #fff, 800px 400px 0 #fff,
-        900px 150px 0 #fff, 1000px 250px 0 #fff,
-        50px 550px 0 #fff, 350px 600px 0 #fff, 650px 580px 0 #fff,
-        920px 550px 0 #fff, 150px 680px 0 #fff, 550px 700px 0 #fff,
-        850px 650px 0 #fff, 1050px 600px 0 #fff;
+        20px 30px 0 #fff, 100px 50px 0 #fff, 200px 120px 0 #fff,
+        320px 80px 0 #fff, 420px 190px 0 #fff, 520px 30px 0 #fff,
+        620px 140px 0 #fff, 740px 60px 0 #fff, 840px 200px 0 #fff,
+        960px 100px 0 #fff, 1100px 170px 0 #fff, 120px 300px 0 #fff,
+        280px 260px 0 #fff, 450px 350px 0 #fff, 600px 290px 0 #fff,
+        750px 380px 0 #fff, 900px 310px 0 #fff, 1030px 370px 0 #fff,
+        200px 450px 0 #fff, 380px 490px 0 #fff, 550px 420px 0 #fff,
+        700px 500px 0 #fff, 860px 460px 0 #fff, 1000px 520px 0 #fff,
+        150px 600px 0 #fff, 340px 580px 0 #fff, 510px 650px 0 #fff,
+        680px 600px 0 #fff, 830px 680px 0 #fff, 980px 630px 0 #fff,
+        60px 720px 0 #fff, 270px 750px 0 #fff, 480px 710px 0 #fff,
+        640px 780px 0 #fff, 790px 730px 0 #fff, 940px 800px 0 #fff;
       animation-delay: 0s;
     }
 
-    .stars::after {
+    .stars-big::after {
+      box-shadow:
+        60px 90px 0 #FFD700, 160px 160px 0 #FFD700, 280px 40px 0 #FFD700,
+        380px 250px 0 #FFD700, 510px 110px 0 #FFD700, 650px 230px 0 #FFD700,
+        780px 150px 0 #FFD700, 920px 280px 0 #FFD700, 1050px 90px 0 #FFD700,
+        100px 380px 0 #FFD700, 320px 330px 0 #FFD700, 490px 460px 0 #FFD700,
+        630px 390px 0 #FFD700, 810px 530px 0 #FFD700, 960px 420px 0 #FFD700,
+        180px 550px 0 #FFD700, 410px 620px 0 #FFD700, 590px 560px 0 #FFD700,
+        740px 690px 0 #FFD700, 900px 590px 0 #FFD700, 1060px 700px 0 #FFD700;
+      animation-delay: 1.5s;
+      width: 3px;
+      height: 3px;
+    }
+
+    .stars-small::before {
+      width: 2px;
+      height: 2px;
+      box-shadow:
+        40px 70px 0 #aaccff, 130px 200px 0 #aaccff, 240px 90px 0 #aaccff,
+        350px 180px 0 #aaccff, 470px 270px 0 #aaccff, 590px 160px 0 #aaccff,
+        700px 280px 0 #aaccff, 820px 50px 0 #aaccff, 940px 340px 0 #aaccff,
+        70px 480px 0 #aaccff, 220px 410px 0 #aaccff, 370px 570px 0 #aaccff,
+        530px 500px 0 #aaccff, 670px 440px 0 #aaccff, 870px 620px 0 #aaccff,
+        140px 680px 0 #aaccff, 300px 700px 0 #aaccff, 460px 770px 0 #aaccff,
+        620px 680px 0 #aaccff, 780px 790px 0 #aaccff, 930px 750px 0 #aaccff;
+      animation: twinkle 4s ease-in-out infinite alternate;
+      animation-delay: 0.8s;
+    }
+
+    .stars-small::after {
       width: 1px;
       height: 1px;
       box-shadow:
-        50px 80px 0 #FFD700, 180px 200px 0 #FFD700, 350px 140px 0 #FFD700,
-        480px 280px 0 #FFD700, 600px 60px 0 #FFD700, 820px 180px 0 #FFD700,
-        950px 320px 0 #FFD700, 150px 380px 0 #FFD700, 550px 350px 0 #FFD700,
-        780px 450px 0 #FFD700, 320px 500px 0 #FFD700, 680px 550px 0 #FFD700,
-        880px 500px 0 #FFD700, 1020px 400px 0 #FFD700;
-      animation-delay: 1.5s;
+        30px 130px 0 #ffddaa, 190px 240px 0 #ffddaa, 310px 110px 0 #ffddaa,
+        440px 210px 0 #ffddaa, 560px 300px 0 #ffddaa, 680px 70px 0 #ffddaa,
+        800px 310px 0 #ffddaa, 910px 210px 0 #ffddaa, 1020px 140px 0 #ffddaa,
+        50px 420px 0 #ffddaa, 250px 560px 0 #ffddaa, 400px 460px 0 #ffddaa,
+        580px 630px 0 #ffddaa, 720px 540px 0 #ffddaa, 880px 670px 0 #ffddaa,
+        110px 770px 0 #ffddaa, 360px 660px 0 #ffddaa, 540px 820px 0 #ffddaa,
+        700px 710px 0 #ffddaa, 860px 840px 0 #ffddaa, 1010px 640px 0 #ffddaa;
+      animation: twinkle 3.5s ease-in-out infinite alternate;
+      animation-delay: 2s;
     }
 
     @keyframes twinkle {
@@ -86,25 +131,75 @@
       border-radius: 50%;
       pointer-events: none;
       z-index: 0;
-      opacity: 0.15;
+      opacity: 0.2;
     }
 
     .planet-1 {
-      width: 120px;
-      height: 120px;
-      background: radial-gradient(circle at 30% 30%, #9333EA, #4C1D95);
-      top: 10%;
-      right: -30px;
-      animation: float 8s ease-in-out infinite;
+      width: 140px;
+      height: 140px;
+      background: radial-gradient(circle at 35% 35%, #c8c8c8, #888 40%, #555 70%, #333);
+      box-shadow: inset -15px -10px 20px rgba(0,0,0,0.5), 0 0 30px rgba(200,200,200,0.1);
+      top: 8%;
+      right: 20px;
+      animation: float 10s ease-in-out infinite;
+    }
+
+    .planet-1::before {
+      content: '';
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      background: radial-gradient(circle, #999, #666);
+      border-radius: 50%;
+      top: 30px;
+      left: 40px;
+      opacity: 0.5;
+    }
+
+    .planet-1::after {
+      content: '';
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: radial-gradient(circle, #aaa, #777);
+      border-radius: 50%;
+      top: 65px;
+      left: 25px;
+      opacity: 0.4;
     }
 
     .planet-2 {
-      width: 80px;
-      height: 80px;
-      background: radial-gradient(circle at 30% 30%, #3B82F6, #1E3A5F);
-      bottom: 15%;
-      left: -20px;
-      animation: float 10s ease-in-out infinite reverse;
+      width: 100px;
+      height: 100px;
+      background: radial-gradient(circle at 30% 30%, #b0b0b0, #777 45%, #444 70%, #222);
+      box-shadow: inset -12px -8px 15px rgba(0,0,0,0.5), 0 0 25px rgba(180,180,180,0.1);
+      bottom: 10%;
+      left: 10px;
+      animation: float 12s ease-in-out infinite reverse;
+    }
+
+    .planet-2::before {
+      content: '';
+      position: absolute;
+      width: 22px;
+      height: 22px;
+      background: radial-gradient(circle, #8a8a8a, #555);
+      border-radius: 50%;
+      top: 22px;
+      right: 28px;
+      opacity: 0.4;
+    }
+
+    .planet-2::after {
+      content: '';
+      position: absolute;
+      width: 7px;
+      height: 7px;
+      background: radial-gradient(circle, #aaa, #666);
+      border-radius: 50%;
+      top: 55px;
+      right: 20px;
+      opacity: 0.5;
     }
 
     @keyframes float {
@@ -112,18 +207,50 @@
       50% { transform: translateY(-30px); }
     }
 
-    /* Ракета */
+    /* Ракеты */
     .rocket {
       position: fixed;
       z-index: 1;
       font-size: 48px;
-      animation: fly 7s ease-in-out infinite;
       pointer-events: none;
     }
 
-    @keyframes fly {
+    .rocket-1 {
+      animation: fly1 6s ease-in-out infinite;
+    }
+
+    .rocket-2 {
+      font-size: 36px;
+      animation: fly2 8s ease-in-out infinite;
+      animation-delay: 3s;
+    }
+
+    .rocket-3 {
+      font-size: 42px;
+      animation: fly3 7s ease-in-out infinite;
+      animation-delay: 5s;
+    }
+
+    @keyframes fly1 {
       0% {
-        transform: translate(-80px, 100vh) rotate(-25deg);
+        transform: translate(-100px, 110vh) rotate(-20deg);
+        opacity: 0;
+      }
+      8% {
+        opacity: 1;
+      }
+      92% {
+        opacity: 1;
+      }
+      100% {
+        transform: translate(110vw, -100px) rotate(-20deg);
+        opacity: 0;
+      }
+    }
+
+    @keyframes fly2 {
+      0% {
+        transform: translate(-80px, 80vh) rotate(-10deg);
         opacity: 0;
       }
       10% {
@@ -133,7 +260,24 @@
         opacity: 1;
       }
       100% {
-        transform: translate(calc(100vw + 80px), -80px) rotate(-25deg);
+        transform: translate(120vw, -50px) rotate(-5deg);
+        opacity: 0;
+      }
+    }
+
+    @keyframes fly3 {
+      0% {
+        transform: translate(10vw, 120vh) rotate(5deg);
+        opacity: 0;
+      }
+      10% {
+        opacity: 1;
+      }
+      90% {
+        opacity: 1;
+      }
+      100% {
+        transform: translate(80vw, -120px) rotate(15deg);
         opacity: 0;
       }
     }
@@ -237,10 +381,15 @@
 </head>
 <body>
 
-  <div class="stars"></div>
+  <div class="stars">
+    <div class="stars-big"></div>
+    <div class="stars-small"></div>
+  </div>
   <div class="planet planet-1"></div>
   <div class="planet planet-2"></div>
-  <div class="rocket">🚀</div>
+  <div class="rocket rocket-1">🚀</div>
+  <div class="rocket rocket-2">🚀</div>
+  <div class="rocket rocket-3">🚀</div>
 
   <div class="content">
     <h1>Кирилл приглашает на день рождения!</h1>
